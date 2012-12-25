@@ -1,0 +1,38 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~README FILE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+About
+======
+
+This repo is meant to keep my test programs from SDL (Simple DirectMedia Layer).
+The are well commented so they can be used as "references" for specific SDL
+features and functions. Some also show off how to use SDL with OpenGL and makes
+use of a few functions of OGL.
+
+
+Contact
+========
+
+You may contact me in the following mail address:
+	neoaggelos@yahoo.gr
+
+
+Installation
+=============
+
+I am really sorry about that, but currently no makefile is provided. Generally,
+all the programs will compile by using this command:
+
++============================================================+
+|gcc source.c -o executable -lSDL -lGL -lGLU -lglut -lSDL_ttf|
++============================================================+
+
+NOTE that not all linker flags are required for all programs. So, if you unsure,
+just add all of them.
+
+ps. Makefile is currently on the making.
+
+
+						~neoaggelos
