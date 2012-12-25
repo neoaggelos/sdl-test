@@ -7,7 +7,7 @@ About
 ======
 
 This repo is meant to keep my test programs from SDL (Simple DirectMedia Layer).
-The are well commented so they can be used as "references" for specific SDL
+They can be used as "references" for specific SDL
 features and functions. Some also show off how to use SDL with OpenGL and makes
 use of a few functions of OGL.
 
