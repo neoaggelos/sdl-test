@@ -18,7 +18,7 @@ int main() {
 	SDL_Init(SDL_INIT_VIDEO);
 	TTF_Init();
 	screen = SDL_SetVideoMode(640,480,0,0);
-	font = TTF_OpenFont("font/Verdana.ttf",15);
+	font = TTF_OpenFont("font.ttf",15);
 	text = TTF_RenderText_Shaded(font,"Sample Text",color,bg);
 	assert(text && screen && font);
 	atexit(cleanup);

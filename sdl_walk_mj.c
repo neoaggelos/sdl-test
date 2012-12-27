@@ -21,12 +21,11 @@ void apply_surface(int x, int y, SDL_Surface* src, SDL_Surface* dest) {
 
 
 void render() {
-	
 	SDL_FillRect(screen,NULL,SDL_MapRGB(screen->format,0,0,0));
 	apply_surface((screen->w - text->w) /2 , 50, text, screen);
 	SDL_BlitSurface(sprite,&frame,screen,&dest);
 	SDL_Flip(screen);
-	SDL_Delay(90);
+	SDL_Delay(100);
 }
 
 int main() {
@@ -37,8 +36,10 @@ int main() {
 	sprite = SDL_LoadBMP("data.bmp");
 	SDL_SetColorKey(sprite,SDL_SRCCOLORKEY,SDL_MapRGB(screen->format,0,0,255));
 	atexit(SDL_Quit);
-	font = TTF_OpenFont("font/Verdana.ttf",72);
+	font = TTF_OpenFont("font.ttf",72);
 	text = TTF_RenderText_Solid(font,"MOON WALK!!!",color); 
+	assert(screen && sprite && font && text);
+	SDL_Delay(1000);
 	dest.w = frame.w = sprite->w / 4;
 	dest.h = frame.h = sprite->h;
 	frame.y = 0;
