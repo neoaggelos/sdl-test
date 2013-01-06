@@ -36,10 +36,12 @@ void update() {
 	dest.y -= yvel;
 
 	if (dest.x <= 0) {xvel=-xvel ;}
-	if (dest.x + dest.w >= screen->w) {xvel=-xvel; }
+	if (dest.x + dest.w >= screen->w) xvel=-xvel; 
 
 	if (dest.y + dest.h >= screen->h) yvel=-yvel;
 	if (i%3==0) yvel -= 1;
+
+	if (yvel == 0) printf("%d\n",dest.y);
 
 }
 
@@ -56,11 +58,11 @@ int main() {
 
 	SDL_SetColorKey(ball,SDL_SRCCOLORKEY,SDL_MapRGB(screen->format,255,255,255));
 
-	xvel = 4;
+	xvel = 2;
 	yvel = 0;
 
-	dest.x = 50;
-	dest.y = 60;
+	dest.x = 10;
+	dest.y = 300;
 
 	while(!quit) {
 		if(SDL_PollEvent(&event) !=0) continue;
@@ -69,8 +71,14 @@ int main() {
 			case SDL_QUIT:
 				quit = true;
 				break;
+			case SDL_KEYDOWN:
+				if (event.key.keysym.sym == SDLK_p)
+					doRender=!doRender;
+				event.type=SDL_KEYUP;
+				break;
 		}
-
+		if (doRender==false) continue;
+	
 		update();
 		render();
 		SDL_Delay(15);

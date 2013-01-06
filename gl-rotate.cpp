@@ -64,7 +64,8 @@ void render() {
 		glColor3f(0,0,1); glVertex2f(-0.5,-0.5);
 		glColor3f(1,0,1); glVertex2f(0.5,-0.5);
 	glEnd();
-/*
+
+
 	glBegin(GL_LINES);
 		glColor3f(1,0,0); glVertex2f(-1,0);
 		glColor3f(1,0,0); glVertex2f(1,0);
@@ -79,7 +80,7 @@ void render() {
 		glColor3f(0,0,1); glVertex3f(0,0,-1);
 		glColor3f(0,0,1); glVertex3f(0,0,1);
 	glEnd();
-*/
+
 	if ((int)angle%360 == 0) SDL_Delay(500);
 
 	SDL_GL_SwapBuffers();
